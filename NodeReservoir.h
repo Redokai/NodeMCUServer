@@ -22,7 +22,6 @@ class NodeReservoir
     int _sensor_id_trigger;
     int _sensor_id_echo;
     char* _reservoir_name;
-    NodePump _pump(int relay_id);
     int _reservoir_height;
 };
 

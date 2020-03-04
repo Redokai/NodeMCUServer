@@ -1,6 +1,8 @@
 #include "NodeServer.h"
 #include "NodeWifi.h"
 #include "NodeDNS.h"
+#include "NodePump.h"
+#include "NodeReservoir.h"
 
 const char* ssid     = "AssociacaoDosNinjas";
 const char* password = "jijiyuki";
@@ -12,7 +14,7 @@ const char* my_dns = "rednode";
 NodeWifi nodeWifi(ssid, password);
 NodeServer nodeServer;
 NodeDNS nodeDns(my_dns);
-
+NodePump pump(1);
 
 void setup() {
 

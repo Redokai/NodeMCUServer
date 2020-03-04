@@ -1,9 +1,12 @@
 #include "Arduino.h"
 #include "NodeReservoir.h"
-#include "NodePump.h"
+//#include "NodePump.h"
 #define DEBUG 1
 
 const int _DEFAULT_RESERVOIR_HEIGHT = 150;
+int _DEFAULT_PUMP_RELAY = 5;
+
+NodePump _pump(_DEFAULT_PUMP_RELAY);
 
 NodeReservoir::NodeReservoir(char* reservoir_name){
   _reservoir_name = reservoir_name;
@@ -19,7 +22,7 @@ void NodeReservoir::SetReservoirLevelSensor(int sensor_id_trigger, int sensor_id
   pinMode(_sensor_id_trigger, OUTPUT);
   pinMode(_sensor_id_echo, INPUT);
   #ifdef DEBUG
-//    Serial.println("Sensor id set on reservoir " + String(_reservoir_name));
+    Serial.println("Sensor id set on reservoir " + String(_reservoir_name));
   #endif
 }
 
@@ -36,7 +39,7 @@ void NodeReservoir::ReadReservoirLevel(){
     mm = duration * 10 / 29 / 2;
     _water_level = _reservoir_height - mm;
     #ifdef DEBUG
-//      Serial.println("Reservoir level on " + String(_reservoir_name) + " is " + String(_water_level));
+      Serial.println("Reservoir level on " + String(_reservoir_name) + " is " + String(_water_level));
     #endif
   }
 }
@@ -46,11 +49,11 @@ void NodeReservoir::SetPump(int relay_id){
 }
 
 void NodeReservoir::ActivatePumps(){
-  _pump->Activate();
+  _pump.Activate();
 }
 
 void NodeReservoir::DeactivatePumps(){
-  _pump->Deactivate();
+  _pump.Deactivate();
 }
 
 void NodeReservoir::SendReservoirLevelWarning(){
@@ -64,5 +67,5 @@ char* NodeReservoir::GetName(){
 }
 
 int NodeReservoir::GetPumpState(){
-  return _pump->GetState();
+  return _pump.GetState();
 }
