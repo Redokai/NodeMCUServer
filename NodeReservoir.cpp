@@ -45,7 +45,7 @@ void NodeReservoir::ReadReservoirLevel(){
 }
 
 void NodeReservoir::SetPump(int relay_id){
-  NodePump _pump(relay_id);
+  _pump.SetRelayId(relay_id);
 }
 
 void NodeReservoir::ActivatePumps(){

@@ -9,6 +9,7 @@ class NodePump
     NodePump(int relayId);
     void Activate();
     void Deactivate();
+    void SetRelayId(int relay_id);
     int GetState();
   private:
     int _state;
