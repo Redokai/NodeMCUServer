@@ -22,7 +22,7 @@ void NodeReservoir::SetReservoirLevelSensor(int sensor_id_trigger, int sensor_id
   pinMode(_sensor_id_trigger, OUTPUT);
   pinMode(_sensor_id_echo, INPUT);
   #ifdef DEBUG
-    Serial.println("Sensor id set on reservoir " + String(_reservoir_name));
+//    Serial.println("Sensor id set on reservoir " + String(_reservoir_name));
   #endif
 }
 
@@ -39,7 +39,7 @@ void NodeReservoir::ReadReservoirLevel(){
     mm = duration * 10 / 29 / 2;
     _water_level = _reservoir_height - mm;
     #ifdef DEBUG
-      Serial.println("Reservoir level on " + String(_reservoir_name) + " is " + String(_water_level));
+//      Serial.println("Reservoir level on " + String(_reservoir_name) + " is " + String(_water_level));
     #endif
   }
 }

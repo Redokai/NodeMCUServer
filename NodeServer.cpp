@@ -35,12 +35,12 @@ void NodeServer::begin(){
 }
 
 void handleRoot() {
-  _server.send(200, "text/html", (String)"Flag :" + String(_flag));
+//  _server.send(200, "text/html", (String)"Flag :" + String(_flag));
 }
 
 void handleSwitchFlag(){
   _flag = !_flag;
-  _server.send(200, "text/html", (String)"Flag switched to:" + String(_flag));
+//  _server.send(200, "text/html", (String)"Flag switched to:" + String(_flag));
 }
 
 void NodeServer::handleClient(){

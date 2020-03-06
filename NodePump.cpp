@@ -14,7 +14,7 @@ void NodePump::Activate(){
   _state = HIGH;
   digitalWrite(_relay_id, _state);
   #ifdef DEBUG
-    Serial.println("Pump " + String(_relay_id) + " switched on");
+//    Serial.println("Pump " + String(_relay_id) + " switched on");
   #endif
 }
 
@@ -22,7 +22,7 @@ void NodePump::Deactivate(){
   _state = LOW;
   digitalWrite(_relay_id, _state);
   #ifdef DEBUG
-    Serial.println("Pump " + String(_relay_id) + " switched off");
+//    Serial.println("Pump " + String(_relay_id) + " switched off");
   #endif
 }
 

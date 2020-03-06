@@ -17,7 +17,7 @@ _last_cycle_starttime = millis();
 SetReservoirName( strcat(garden_name, " reservoir"));
 #ifdef DEBUG
     Serial.begin(115200);
-    Serial.println("Garden " + String(_garden_name) + " started ");
+//    Serial.println("Garden " + String(_garden_name) + " started ");
 #endif
 }
 
