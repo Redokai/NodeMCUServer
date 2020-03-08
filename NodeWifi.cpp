@@ -28,6 +28,9 @@ void NodeWifi::WaitUntilConnect(){
     #endif
   }
   #ifdef DEBUG
-      Serial.println("Successfully connected to " + String(_ssid) + " - " + WiFi.localIP());
+      Serial.print("Successfully connected to ");
+      Serial.print(_ssid);
+      Serial.print(" - ");
+      Serial.println(WiFi.localIP());
   #endif
 }
