@@ -16,6 +16,10 @@ NodeReservoir::NodeReservoir(char* reservoir_name){
   #endif
 }
 
+void NodeReservoir::SetName(char* reservoir_name){
+  _reservoir_name = reservoir_name;
+}
+
 void NodeReservoir::SetReservoirLevelSensor(int sensor_id_trigger, int sensor_id_echo){
   _sensor_id_trigger = sensor_id_trigger;
   _sensor_id_echo = sensor_id_echo;

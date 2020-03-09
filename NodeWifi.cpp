@@ -15,7 +15,11 @@ NodeWifi::NodeWifi(const char* ssid,const char* password){
 void NodeWifi::Connect(){
   WiFi.begin(_ssid, _password);
   #ifdef DEBUG
-//      Serial.println("Connection to (INSIDE) " + String(_ssid));
+      Serial.println();
+      Serial.print("Connection to ");
+      Serial.print(_ssid);
+      Serial.print(" - password: ");
+      Serial.println(_password);
   #endif
 }
 
@@ -28,6 +32,9 @@ void NodeWifi::WaitUntilConnect(){
     #endif
   }
   #ifdef DEBUG
-//      Serial.println("Successfully connected to " + String(_ssid) + " - " + String(WiFi.localIP()));
+      Serial.print("Successfully connected to ");
+      Serial.print(_ssid);
+      Serial.print(" - ");
+      Serial.println(WiFi.localIP());
   #endif
 }

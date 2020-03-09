@@ -8,6 +8,7 @@ class NodeReservoir
 {
   public: 
     NodeReservoir(char* reservoir_name);
+    void SetName(char* reservoir_name);
     void SetReservoirLevelSensor(int sensor_id_trigger, int sensor_id_echo);
     void ReadReservoirLevel();
     void SetPump(int relay_id);
