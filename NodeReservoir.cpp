@@ -42,7 +42,7 @@ void NodeReservoir::ReadReservoirLevel(){
     mm = duration * 10 / 29 / 2;
     _water_level = _reservoir_height - mm;
     #ifdef DEBUG
-//      Serial.println("Reservoir level on " + String(_reservoir_name) + " is " + String(_water_level));
+      Serial.println("Reservoir level on " + String(_reservoir_name) + " is " + String(_water_level));
     #endif
   }
 }

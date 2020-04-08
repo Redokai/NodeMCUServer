@@ -33,10 +33,10 @@ void setup() {
   nodeDns.begin();
   nodeServer.begin();
 
-  garden_1.SetReservoirPumpRelay(2);
+  garden_1.SetReservoirPumpRelay(0);
   garden_1.SetPumpStatusFeed(IO_PUMP_1_FEED);
 
-  garden_2.SetReservoirPumpRelay(16);
+  garden_2.SetReservoirPumpRelay(2);
   garden_2.SetPumpStatusFeed(IO_PUMP_2_FEED);
   garden_2.SetWateringInterval(_SHORT_WATERING_TIME);
   garden_2.SetCycleInterval(_SHORT_CYCLE_TIME);
