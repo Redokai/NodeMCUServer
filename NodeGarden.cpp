@@ -11,11 +11,6 @@ char* _DEFAULT_GARDEN_NAME = "Garden 1";
 #define IO_ACTION_FEED         "action-tracking"
 #define IO_DEVICE_FEED         "device-tracking"
 
-//NodeReservoir _reservoir(_DEFAULT_GARDEN_NAME);
-AdafruitIO_WiFi *_io;
-AdafruitIO_Feed *_action_logger;
-AdafruitIO_Feed *_device_logger;
-
 NodeGarden::NodeGarden(char* garden_name, AdafruitIO_WiFi *io){
 _garden_name = garden_name;
 _cycle_time = _DEFAULT_CYCLE_TIME;

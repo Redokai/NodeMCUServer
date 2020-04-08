@@ -24,6 +24,9 @@ class NodeGarden
     char* _pump_status_feed;
     NodeReservoir *_reservoir;
     AdafruitIO_Feed *_pump_state_logger;
+    AdafruitIO_WiFi *_io;
+    AdafruitIO_Feed *_action_logger;
+    AdafruitIO_Feed *_device_logger;
 };
 
 #endif

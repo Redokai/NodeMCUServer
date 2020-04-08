@@ -10,7 +10,7 @@
 #define GARDEN1_NAME    "Tomato Garden"
 #define GARDEN2_NAME    "Chery tomato Garden"
 #define IO_USERNAME     "redokai"
-#define IO_KEY          "aio_wNag047fs3RN7v9Tk7emiQirnGyt"
+#define IO_KEY          "aio_nLfJ810RnAfP9Itol6eMgmu41l1O"
 #define IO_DEVICE_FEED  "device-tracking"
 #define IO_PUMP_1_FEED  "pump1-state"
 #define IO_PUMP_2_FEED  "pump2-state"

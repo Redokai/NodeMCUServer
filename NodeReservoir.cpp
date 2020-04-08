@@ -6,11 +6,10 @@
 const int _DEFAULT_RESERVOIR_HEIGHT = 150;
 int _DEFAULT_PUMP_RELAY = 5;
 
-NodePump _pump(_DEFAULT_PUMP_RELAY);
-
 NodeReservoir::NodeReservoir(char* reservoir_name){
   _reservoir_name = reservoir_name;
   _reservoir_height = _DEFAULT_RESERVOIR_HEIGHT;
+  _pump = new NodePump(_DEFAULT_PUMP_RELAY);
   #ifdef DEBUG
       Serial.begin(115200);
   #endif
@@ -49,15 +48,15 @@ void NodeReservoir::ReadReservoirLevel(){
 }
 
 void NodeReservoir::SetPump(int relay_id){
-  _pump.SetRelayId(relay_id);
+  _pump->SetRelayId(relay_id);
 }
 
 void NodeReservoir::ActivatePumps(){
-  _pump.Activate();
+  _pump->Activate();
 }
 
 void NodeReservoir::DeactivatePumps(){
-  _pump.Deactivate();
+  _pump->Deactivate();
 }
 
 void NodeReservoir::SendReservoirLevelWarning(){
@@ -71,5 +70,5 @@ char* NodeReservoir::GetName(){
 }
 
 int NodeReservoir::GetPumpState(){
-  return _pump.GetState();
+  return _pump->GetState();
 }
